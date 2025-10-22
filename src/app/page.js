@@ -208,6 +208,7 @@ export default function Home() {
         });
     }, []);
 
+  
     /***** UTILITY FOR RANGE TRAIL BG COLOR *****/
 
     const rangers = [
@@ -300,7 +301,7 @@ export default function Home() {
 
     return (
         <>
-            <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+            
                 <main className="infiloop flex min-h-screen flex-col items-center justify-between p-8 max-sm:p-2 max-md:p-4 max-sm:pt-">
                     <div className="z-1 items-center bg-black/40  max-md:overflow-y-auto max-md:h-80 max-sm:-ml-8  max-sm:mb-0 max-sm:-mr-8 max-sm:pl-14 max-sm:pr-14 p-10 pt-10 pb-10 border-slate-800 border-1 border-solid  shadow-xl mb-6 rounded-lg max-sm:mt-0 mt-0 z-1 w-full md:mt-1 max-w-5xl ">
                         <div className="grid gap-6 grid-cols-2  max-sm:grid-cols-1 items-center">
@@ -395,7 +396,7 @@ export default function Home() {
                         ))}
                     </div>
                 </main>
-            </div>
+          
         </>
     );
 }
