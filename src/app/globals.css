@@ -1,0 +1,883 @@
+@import "tailwindcss";
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: local("Roboto"), url("../../public/fonts/roboto/Roboto-Regular-webfont.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: local("Roboto"), url("../../public/fonts/roboto/Roboto-RegularItalic.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: local("Roboto"), url("../../public/fonts/roboto/Roboto-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: local("Roboto"), url("../../public/fonts/roboto/Roboto-BoldItalic.woff") format("woff");
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Roboto Condensed";
+    src: local("Roboto Condensed"), url("../../public/fonts/roboto/Roboto-Light.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto Condensed";
+    src: local("Roboto Condensed"), url("../../public/fonts/roboto/Roboto-LightItalic.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Roboto Condensed";
+    src: local("Roboto Condensed"), url("../../public/fonts/roboto/Roboto-Medium.woff2") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto Condensed";
+    src: local("Roboto Condensed"), url("../../public/fonts/roboto/Roboto-MediumItalic.woff") format("woff");
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* 
+@font-face {
+    font-family: 'Roboto Thin';
+    src: local('Roboto Thin'), url('https://roboto-webfont.googlecode.com/files/Roboto-Thin-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Thin';
+    src: local('Roboto Thin'), url('https://roboto-webfont.googlecode.com/files/Roboto-ThinItalic-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto Light';
+    src: local('Roboto Light'), url('https://roboto-webfont.googlecode.com/files/Roboto-Light-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Light';
+    src: local('Roboto Light'), url('https://roboto-webfont.googlecode.com/files/Roboto-LightItalic-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto Medium';
+    src: local('Roboto Medium'), url('https://roboto-webfont.googlecode.com/files/Roboto-Medium-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Medium';
+    src: local('Roboto Medium'), url('https://roboto-webfont.googlecode.com/files/Roboto-MediumItalic-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'Roboto Black';
+    src: local('Roboto Black'), url('https://roboto-webfont.googlecode.com/files/Roboto-Black-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Black';
+    src: local('Roboto Black'), url('https://roboto-webfont.googlecode.com/files/Roboto-BlackItalic-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+ */
+
+@font-face {
+    font-family: "SangBleu Kingdom-Regular-S";
+    src: url(https://addium.marketing/fonts/SangBleuKingdom-Regular-WebS.woff) format("woff"),
+        url("https://addium.marketing/fonts/SangBleuKingdom-Regular-WebS.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "SangBleu Kingdom-Regular-XL";
+    src: url(https://addium.marketing/fonts/SangBleuKingdom-Regular-WebXL.woff) format("woff"),
+        url("https://addium.marketing/fonts/SangBleuKingdom-Regular-WebXL.woff2") format("woff2");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "ABCMonumentGroteskMono";
+    src: url(https://addium.marketing/fonts/ABCMonumentGroteskMono-Regular.otf) format("opentype");
+    src: url(https://addium.marketing/fonts//ABCMonumentGroteskMono-Regular.woff) format("woff"),
+        url("https://addium.marketing/fonts/ABCMonumentGroteskMono-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "ABCMonumentGrotesk";
+    src: url(https://addium.marketing/fonts/ABCMonumentGrotesk-Regular.otf) format("opentype");
+    src: url(https://addium.marketing/fonts/ABCMonumentGrotesk-Regular.woff) format("woff"),
+        url("https://addium.marketing/fonts/ABCMonumentGrotesk-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "ABCMonumentGroteskBold";
+    src: url(https://addium.marketing/fonts/ABCMonumentGrotesk-Bold.otf) format("opentype");
+    src: url(https://addium.marketing/fonts/ABCMonumentGrotesk-Bold.woff) format("woff"),
+        url("https://addium.marketing/fonts/ABCMonumentGrotesk-Bold.woff2") format("woff2");
+}
+
+/* 
+@font-face {
+    font-family: "Akkurat Pro Regular";
+    src: url(https://addium.marketing/fonts/lineto-akkurat-pro-regular.woff) format("woff"), url("https://addium.marketing/fonts/lineto-akkurat-pro-regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Akkurat Mono Bold";
+    src: url(https://addium.marketing/fonts/lineto-akkurat-pro-bold.woff) format("woff"), url("https://addium.marketing/fonts/lineto-akkurat-pro-bold.woff2") format("woff2");
+} */
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    /*  font-family: "ABCMonumentGrotesk", Arial, san-serif; */
+    font-family: "Roboto", ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+}
+
+body {
+    color: #4e8cd6;
+    background: linear-gradient(to bottom, transparent, rgb(5, 24, 74)) rgb(3, 12, 35);
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+/* 
+#Results {
+   padding-top: 40px;
+    margin-top: -40px; 
+}
+*/
+
+.bg-blue {
+    background-color: #06153c;
+}
+
+.bg-grayy {
+    background: #161617;
+}
+
+.homeTitle {
+    /*  color: #338fdc; */
+    color: #ffffff;
+    font-size: 2rem;
+    font-family: "Roboto", ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+    padding-left: 0rem;
+}
+
+.sliderElm {
+    position: relative;
+}
+
+/* .text-akkurat {
+    font-family: "Akkurat Pro Regular", ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+}
+
+.text-akkurat-bold {
+    font-family: "Akkurat Mono Bold", ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+}
+ */
+
+.text-roboto {
+    font-family: "Roboto", ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+}
+
+.__range {
+    margin: 30px 0 20px 0;
+    -webkit-appearance: none;
+    background-color: #b2b9be;
+    height: 3px;
+    width: 100%;
+    margin: 10px auto;
+}
+
+.__range:focus {
+    outline: none;
+}
+
+.__range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #2a8bdc;
+    border-radius: 50%;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+.input-blue {
+    color: #2a8bdc;
+}
+
+.dark-bluee {
+    background: #071230;
+}
+
+.blue-green {
+    color: #81b5cc;
+    font-weight: bold;
+}
+
+.dark-grayy {
+    background: #1c1c1c;
+}
+
+* {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+p {
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -o-user-select: text;
+    user-select: text;
+}
+
+.sea-salt {
+    background-color: #1b2845;
+    background-image: linear-gradient(315deg, #1b2845 0%, #274060 74%);
+}
+
+.mint-green {
+    background: #cdedad;
+}
+
+.iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 1200px;
+    /* height: 900px; */
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* .buble {
+    position: relative;
+    width: 60px;
+    left: 43.777%;
+    height: 1em;
+    text-align: center;
+    color: #81b5cc;
+    font-weight: bold;
+    white-space: nowrap;
+} */
+
+.buble {
+    /* position: relative; */
+    width: 60px;
+    left: 83%;
+    height: 1em;
+    /* text-align: right; */
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.top-4 {
+    top: 1rem;
+}
+
+.right-4 {
+    right: 1rem;
+}
+
+.rounded-full {
+    border-radius: 9999px;
+}
+
+.TextGroup {
+    width: 100%;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.035);
+    border: 1px solid transparent;
+}
+
+.animateBlackBG {
+    background: linear-gradient(-45deg, #373636, #000509);
+    background-size: 400% 400%;
+    animation: gradient 7s ease 3;
+}
+
+.animateBG {
+    /* background: linear-gradient(-45deg, #082750, #256a9d, #552586, #144677, #552586, #194669, #082750); */
+    background: linear-gradient(-45deg, #151754, #213590, #272377, #591191, #127b81, #1c0e4b, #151754);
+    background-size: 400% 400%;
+    animation: gradient 30s ease 3;
+}
+
+.animateBGDark {
+    /*  background: radial-gradient(-45deg, #0C134F, #1D267D, #5C469C, #144677, #D4ADFC, #1D267D, #0C134F); */
+    background: radial-gradient(#0f2663 15%, #06153c 60%);
+    background-size: 400% 400%;
+    animation: gradient 17s ease 3;
+}
+
+.animatedBorder {
+    border-color: #ee7752;
+    animation-name: flash_border;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: 2;
+    -webkit-animation-name: flash_border;
+    -webkit-animation-duration: 15s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: 2;
+    -moz-animation-name: flash_border;
+    -moz-animation-duration: 15s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: 2;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+    0% {
+        background-position: 50% 0%;
+    }
+}
+
+@keyframes flash_border {
+    0% {
+        border-color: #ee7752;
+    }
+    50% {
+        border-color: #e73c7e;
+    }
+    100% {
+        border-color: #ffffff;
+    }
+}
+
+@-webkit-keyframes flash_border {
+    0% {
+        border-color: #ee7752;
+    }
+    50% {
+        border-color: #e73c7e;
+    }
+    100% {
+        border-color: #ffffff;
+    }
+}
+
+@-moz-keyframes flash_border {
+    0% {
+        border-color: #ee7752;
+    }
+    50% {
+        border-color: #e73c7e;
+    }
+    100% {
+        border-color: #ffffff;
+    }
+}
+
+@keyframes move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #030a2b;
+    overflow: hidden;
+}
+
+.background span {
+    width: 50vmin;
+    height: 50vmin;
+    border-radius: 50vmin;
+    backface-visibility: hidden;
+    position: absolute;
+    animation: move;
+    animation-duration: 8;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.background span:nth-child(0) {
+    color: #27043e;
+    top: 59%;
+    left: 89%;
+    animation-duration: 269s;
+    animation-delay: -319s;
+    transform-origin: -8vw -20vh;
+    box-shadow: 100vmin 0 13.10422931296062vmin currentColor;
+}
+
+.background span:nth-child(1) {
+    color: #27043e;
+    top: 35%;
+    left: 7%;
+    animation-duration: 83s;
+    animation-delay: -178s;
+    transform-origin: 5vw 22vh;
+    box-shadow: 100vmin 0 12.69339756113385vmin currentColor;
+}
+
+.background span:nth-child(2) {
+    color: #0e213f;
+    top: 88%;
+    left: 100%;
+    animation-duration: 24s;
+    animation-delay: -59s;
+    transform-origin: -24vw -15vh;
+    box-shadow: 100vmin 0 13.293093201262156vmin currentColor;
+}
+
+.background span:nth-child(3) {
+    color: #0e213f;
+    top: 43%;
+    left: 43%;
+    animation-duration: 387s;
+    animation-delay: -238s;
+    transform-origin: 10vw 7vh;
+    box-shadow: -100vmin 0 13.175091474856787vmin currentColor;
+}
+
+.background span:nth-child(4) {
+    color: #17172c;
+    top: 63%;
+    left: 70%;
+    animation-duration: 289s;
+    animation-delay: -137s;
+    transform-origin: -15vw -6vh;
+    box-shadow: 100vmin 0 12.986850046940807vmin currentColor;
+}
+
+.background span:nth-child(5) {
+    color: #0e213f;
+    top: 5%;
+    left: 87%;
+    animation-duration: 269s;
+    animation-delay: -114s;
+    transform-origin: 1vw 4vh;
+    box-shadow: 100vmin 0 12.62810603085949vmin currentColor;
+}
+
+.background span:nth-child(6) {
+    color: #17172c;
+    top: 47%;
+    left: 95%;
+    animation-duration: 104s;
+    animation-delay: -90s;
+    transform-origin: -8vw -19vh;
+    box-shadow: 100vmin 0 12.632414272452095vmin currentColor;
+}
+
+.background span:nth-child(7) {
+    color: #0e213f;
+    top: 60%;
+    left: 28%;
+    animation-duration: 365s;
+    animation-delay: -65s;
+    transform-origin: 23vw -7vh;
+    box-shadow: 100vmin 0 13.440144225696033vmin currentColor;
+}
+
+.background span:nth-child(8) {
+    color: #17172c;
+    top: 27%;
+    left: 99%;
+    animation-duration: 376s;
+    animation-delay: -227s;
+    transform-origin: 11vw -17vh;
+    box-shadow: 100vmin 0 13.266822142038695vmin currentColor;
+}
+
+.background span:nth-child(9) {
+    color: #0e213f;
+    top: 48%;
+    left: 66%;
+    animation-duration: 217s;
+    animation-delay: -22s;
+    transform-origin: 10vw 9vh;
+    box-shadow: 100vmin 0 13.388692138463vmin currentColor;
+}
+
+.background span:nth-child(10) {
+    color: #27043e;
+    top: 46%;
+    left: 87%;
+    animation-duration: 121s;
+    animation-delay: -51s;
+    transform-origin: -5vw 25vh;
+    box-shadow: 100vmin 0 13.30800346575398vmin currentColor;
+}
+
+.background span:nth-child(11) {
+    color: #17172c;
+    top: 43%;
+    left: 49%;
+    animation-duration: 287s;
+    animation-delay: -23s;
+    transform-origin: -24vw 10vh;
+    box-shadow: -100vmin 0 13.171716822142159vmin currentColor;
+}
+
+.background span:nth-child(12) {
+    color: #27043e;
+    top: 64%;
+    left: 48%;
+    animation-duration: 418s;
+    animation-delay: -220s;
+    transform-origin: 7vw -5vh;
+    box-shadow: -100vmin 0 12.775007255644889vmin currentColor;
+}
+
+.background span:nth-child(13) {
+    color: #27043e;
+    top: 55%;
+    left: 87%;
+    animation-duration: 138s;
+    animation-delay: -231s;
+    transform-origin: -9vw 0vh;
+    box-shadow: -100vmin 0 13.185554577970391vmin currentColor;
+}
+
+.background span:nth-child(14) {
+    color: #0e213f;
+    top: 56%;
+    left: 69%;
+    animation-duration: 312s;
+    animation-delay: -120s;
+    transform-origin: -16vw -24vh;
+    box-shadow: -100vmin 0 12.703214539461662vmin currentColor;
+}
+
+.background span:nth-child(15) {
+    color: #17172c;
+    top: 37%;
+    left: 31%;
+    animation-duration: 105s;
+    animation-delay: -313s;
+    transform-origin: 15vw 10vh;
+    box-shadow: -100vmin 0 13.08017634719512vmin currentColor;
+}
+
+.background span:nth-child(16) {
+    color: #17172c;
+    top: 2%;
+    left: 24%;
+    animation-duration: 267s;
+    animation-delay: -275s;
+    transform-origin: -15vw -7vh;
+    box-shadow: 100vmin 0 13.038278339484183vmin currentColor;
+}
+
+.background span:nth-child(17) {
+    color: #27043e;
+    top: 98%;
+    left: 98%;
+    animation-duration: 17s;
+    animation-delay: -383s;
+    transform-origin: 15vw 23vh;
+    box-shadow: 100vmin 0 13.19299609105774vmin currentColor;
+}
+
+.background span:nth-child(18) {
+    color: #27043e;
+    top: 35%;
+    left: 40%;
+    animation-duration: 207s;
+    animation-delay: -203s;
+    transform-origin: 8vw -13vh;
+    box-shadow: -100vmin 0 13.40603333072544vmin currentColor;
+}
+
+.background span:nth-child(19) {
+    color: #0e213f;
+    top: 16%;
+    left: 12%;
+    animation-duration: 357s;
+    animation-delay: -316s;
+    transform-origin: -15vw -22vh;
+    box-shadow: -100vmin 0 13.464347934156013vmin currentColor;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.gradient {
+    --size: 750px;
+    --speed: 50s;
+    --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+    width: var(--size);
+    height: var(--size);
+    filter: blur(calc(var(--size) / 5));
+    background-image: linear-gradient(hsl(222, 84, 60, 100%), hsl(164, 79, 71));
+    animation: rotate var(--speed) var(--easing) alternate infinite;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+@media (min-width: 720px) {
+    .gradient {
+        --size: 500px;
+    }
+}
+
+.grad-container {
+    background-color: #071c39;
+    inset: 0;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* This is just to transition when you change the viewport size. */
+
+* {
+    transition: all 0.5s ease-out;
+}
+
+/****** Infinit *********/
+
+.infiloop {
+    background: linear-gradient(to right, #06153c 0%, #03346e 19%, #1e2a5e 40%, #021526 60%, #2e236c 83%, #06153c 100%);
+    background-size: 10000px 100%;
+    animation: bg 15s linear infinite;
+}
+
+@keyframes bg {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 10000px;
+    }
+}
+
+/******* Animated border *****/
+
+.card {
+    width: 100%;
+}
+
+.card .inner {
+    padding: 25px;
+    background: #222;
+}
+
+.example-2 {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.example-2 .inner {
+    /* position: relative; */
+    z-index: 1;
+    width: 100%;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.example-2 .inner {
+    margin: 2px;
+}
+
+.example-2::before {
+    content: "";
+    display: block;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(102, 102, 102, 0.75) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    height: 300px;
+    width: 100px;
+    transform: translate(0);
+    position: absolute;
+    animation: rotate 5s linear forwards infinite;
+    z-index: 0;
+    top: 50%;
+    transform-origin: top center;
+}
+
+@keyframes glow {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+@keyframes animateOutline {
+    0% {
+        outline-width: 1px;
+        outline-offset: 0;
+        outline-color: rgba(0, 130, 206, 0);
+    }
+    10% {
+        outline-color: rgba(0, 130, 206, 0.75);
+    }
+    /* The animation finishes at 50% */
+    50% {
+        outline-width: 7px;
+        outline-offset: 4px;
+        outline-color: rgba(0, 130, 206, 0);
+    }
+    100% {
+        outline-width: 7px;
+        outline-offset: 4px;
+        outline-color: rgba(102, 102, 102, 0);
+    }
+}
+
+@keyframes svgAnimation {
+    from {
+        stroke-dashoffset: 0;
+    }
+    to {
+        stroke-dashoffset: 1000;
+    }
+}
+
+/******* Animated border *****/
+
+h3.tts {
+    position: relative;
+}
+
+h3.tts::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 5.5px;
+    left: 0;
+    width: 9pt;
+    height: 9pt;
+    background: black;
+    border-radius: 50%;
+}
+
+h3.tts {
+    text-transform: uppercase;
+    margin: -8.5px 0 5px 10px;
+    font-family: ABCMonumentGroteskMono, sans-serif;
+    padding: 0 0 0 24px;
+    color: #000000;
+    max-width: none;
+}
+
+/********** iOS prevent pull to refresh  **********/
+
+.iOSNoPullRefresh {
+    height: calc(100vh - env(safe-area-inset-bottom) - env(safe-area-inset-top));
+}
+
+@supports (-webkit-touch-callout: none) {
+    .iOSNoPullRefresh {
+        height: -webkit-fill-available;
+    }
+}
+
+.iOSNoPullRefreshAlternatve {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+}

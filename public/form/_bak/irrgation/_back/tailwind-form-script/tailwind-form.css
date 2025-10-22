@@ -1,0 +1,49 @@
+ /************ BEST VERSION in Validation and UI */
+ 
+ @font-face {
+     font-family: 'AddiumSerif';
+     font-display: swap;
+     src: url(https://addium.marketing/fonts/addium-serif-400.woff2)format("woff2"), url(https://addium.marketing/fonts/addium-serif-400.woff)format("woff");
+     font-weight: 400;
+     font-style: normal
+ }
+ 
+ @font-face {
+     font-family: 'AddiumSans';
+     font-display: swap;
+     src: url(https://addium.marketing/fonts/addium-sans-400.woff2)format("woff2"), url(https://addium.marketing/fonts/addium-sans-400.woff)format("woff");
+     font-weight: 400;
+     font-style: normal
+ }
+ 
+ @font-face {
+     font-family: 'AddiumSans';
+     font-display: swap;
+     src: url(https://addium.marketing/fonts/addium-sans-400-italic.woff2)format("woff2"), url(https://addium.marketing/fonts/addium-sans-400-italic.woff)format("woff");
+     font-weight: 400;
+     font-style: italic
+ }
+ 
+ @font-face {
+     font-family: 'AddiumSans';
+     font-display: swap;
+     src: url(https://addium.marketing/fonts/addium-sans-500.woff2)format("woff2"), url(https://addium.marketing/fonts/addium-sans-500.woff)format("woff");
+     font-weight: 500;
+     font-style: normal
+ }
+ 
+ @font-face {
+     font-family: 'AddiumSans';
+     font-display: swap;
+     src: url(https://addium.marketing/fonts/addium-sans-500-italic.woff2)format("woff2"), url(https://addium.marketing/fonts/addium-sans-500-italic.woff)format("woff");
+     font-weight: 500;
+     font-style: italic
+ }
+ 
+ @font-face {
+     font-family: 'AddiumMono';
+     font-display: swap;
+     src: url(https://addium.marketing/fonts/addium-mono-400.woff2)format("woff2"), url(https://addium.marketing/fonts/addium-mono-400.woff)format("woff");
+     font-weight: 400;
+     font-style: normal
+ }

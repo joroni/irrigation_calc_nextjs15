@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--  <script src="https://cdn.tailwindcss.com"></script> -->
+
+    <script src="https://kit.fontawesome.com/ffbd6d2f88.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./script.js"></script>
+</head>
+
+<body class="flex flex-wrap justify-center items-center">
+    <form class="my-10 p-5 w-72 md:w-96 bg-slate-200 rounded-lg flex flex-col items-center gap-4" id="userForm">
+        <div class="flex flex-col gap-2">
+            <label class="text-slate-700">Name</label>
+            <input type="text" id="username" class="border-2 border-gray-300 rounded-lg px-3 py-2 w-60 focus:outline-none" required />
+        </div>
+        <div class="flex flex-col gap-2">
+            <label class="text-slate-700">Email</label>
+            <input type="email" id="email" class="border-2 border-gray-300 rounded-lg px-3 py-2 w-60 focus:outline-none" required />
+            <div id="email-error" class="hidden mt-2 text-red-800 text-xs">
+                invalid Email
+            </div>
+        </div>
+        <div class="flex flex-col gap-2">
+            <label class="text-slate-700">Phone</label>
+            <div class="relative">
+                <span class="absolute bottom-2.5 left-2 text-slate-500 font-bold">+91</span>
+                <input type="number" id="phone" class="border-2 border-gray-300 rounded-lg pl-10 py-2 w-60 focus:outline-none text-slate-800" required />
+            </div>
+            <div id="phone-error" class="hidden mt-2 text-red-800 text-xs">
+                Phone number should be 10 digit long
+            </div>
+        </div>
+        <div class="flex flex-col gap-2">
+            <label class="text-slate-700">Password
+        <button class="px-3 py-2" id="password-view">
+          <i class="fa-solid fa-eye text-blue-600"></i></button></label>
+            <div>
+                <input type="password" id="password" class="border-2 border-gray-300 rounded-lg px-3 py-2 w-60 focus:outline-none" required />
+            </div>
+            <p id="letter" class="hidden text-red-800 text-xs">A <b>lowercase</b> letter</p>
+            <p id="capital" class="hidden text-red-800 text-xs">
+                A <b>capital (uppercase)</b> letter
+            </p>
+            <p id="number" class="hidden text-red-800 text-xs">A <b>number</b></p>
+            <p id="length" class="hidden text-red-800 text-xs">
+                Minimum <b>10 characters</b>
+            </p>
+        </div>
+        <div class="flex flex-col gap-2">
+            <label class="text-slate-700">Confirm Password
+        <button class="px-3 py-2" id="confirm-password-view">
+          <i class="fa-solid fa-eye text-blue-600"></i></button></label>
+
+            <input type="password" id="confirm-password" class="border-2 border-gray-300 rounded-lg px-3 py-2 w-60 focus:outline-none" required />
+            <p id="confirm-letter" class="hidden text-red-800 text-xs">
+                A <b>lowercase</b> letter
+            </p>
+            <p id="confirm-capital" class="hidden text-red-800 text-xs">
+                A <b>capital (uppercase)</b> letter
+            </p>
+            <p id="confirm-number" class="hidden text-red-800 text-xs">A <b>number</b></p>
+            <p id="confirm-length" class="hidden text-red-800 text-xs">
+                Minimum <b>8 characters</b>
+            </p>
+            <p id="confirm-password-checker" class="hidden text-red-800 text-xs">Password not matching</p>
+        </div>
+        <div class="flex justify-center mt-5">
+            <input type="submit" value="submit" class="px-4 py-2 rounded-lg border-2 border-violet-600 text-violet-600 cursor-pointer" />
+        </div>
+    </form>
+    <div id="data-container" class="self-start mt-10"></div>
+</body>
+
+</html>

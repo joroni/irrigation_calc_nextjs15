@@ -1,0 +1,15 @@
+.error input,
+.error select,
+.error textarea {
+    border-color: red !important;
+}
+
+.error label {
+    top: 10px !important;
+    scale: 0.8;
+}
+
+
+/* .pfahWrapper {
+    position: relative;
+} */
